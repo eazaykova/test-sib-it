@@ -1,0 +1,99 @@
+<div mat-dialog-title>Продукт</div>
+<form [formGroup]="emptyForm" (ngSubmit)="onFormSubmit()" #myform="ngForm">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Название</mat-label>
+        <input matInput type="text" formControlName="name" />
+      </mat-form-field>
+      <div
+        *ngIf="
+          emptyForm.get('name')!.hasError('required') &&
+          emptyForm.get('name')?.touched
+        "
+        class="alert"
+      >
+        Название обязательно для заполнения
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Количество</mat-label>
+        <input matInput type="number" formControlName="quantity" />
+      </mat-form-field>
+
+      <div
+        *ngIf="
+          emptyForm.get('quantity')!.hasError('required') &&
+          emptyForm.get('quantity')?.touched
+        "
+        class="alert"
+      >
+        Количество обязательно для заполнения
+      </div>
+      <div
+        *ngIf="
+          emptyForm.get('quantity')!.hasError('min') &&
+          emptyForm.get('quantity')?.touched
+        "
+        class="alert"
+      >
+        Количество не может быть меньше 1
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Единица измерения</mat-label>
+        <mat-select formControlName="measure">
+          <mat-option *ngFor="let measure of measures" [value]="measure.id">
+            {{ measure.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div
+        *ngIf="
+          emptyForm.get('measure')!.hasError('required') &&
+          emptyForm.get('measure')?.touched
+        "
+        class="alert"
+      >
+        Ед. измерения обязательна для заполнения
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Стоимость</mat-label>
+        <input matInput type="number" formControlName="unit_coast" />
+      </mat-form-field>
+    </div>
+    <div
+      *ngIf="
+        emptyForm.get('unit_coast')!.hasError('required') &&
+        emptyForm.get('unit_coast')!.touched
+      "
+      class="alert alert-danger"
+    >
+      Стоимость обязательна для заполнения
+    </div>
+    <div
+      *ngIf="
+        emptyForm.get('unit_coast')!.hasError('min') &&
+        emptyForm.get('unit_coast')!.touched
+      "
+      class="alert alert-danger"
+    >
+      Стоимость должна быть положительной
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      [mat-dialog-close]="false"
+    >
+      Отмена
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ data ? "Обновить" : "Сохранить" }}
+    </button>
+  </div>
+</form>

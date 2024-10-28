@@ -1,0 +1,92 @@
+{
+  "measures": [
+    {
+      "id": 1,
+      "name": "шт."
+    },
+    {
+      "id": 2,
+      "name": "кг."
+    },
+    {
+      "id": 3,
+      "name": "упаковка"
+    },
+    {
+      "id": 4,
+      "name": "г."
+    }
+  ],
+  "products": [
+    {
+      "name": "Кукурузные снеки Cheetos, мандарин",
+      "quantity": 70,
+      "unit_coast": 109,
+      "measure": 4,
+      "id": 1
+    },
+    {
+      "name": "Кисломолочный напиток Actimuno Kids, 1,5%, тропический микс ",
+      "quantity": 95,
+      "unit_coast": 33,
+      "measure": 4,
+      "id": 2
+    },
+    {
+      "name": "Свиной фарш Сибагро, Для домашних котлет, охлаждённый ",
+      "quantity": 400,
+      "unit_coast": 179,
+      "measure": 4,
+      "id": 3
+    },
+    {
+      "name": "Свиная рулька Сибагро, в маринаде, для запекания, охлаждённая ",
+      "quantity": 1,
+      "unit_coast": 365,
+      "measure": 2,
+      "id": 4
+    },
+    {
+      "name": "Бисквит FitnesShock Light, 20% протеина, без сахара, тирамису ",
+      "quantity": 1,
+      "unit_coast": 130,
+      "measure": 1,
+      "id": 5
+    },
+    {
+      "name": "Готовый завтрак Chocozavr, шоколадные лапы и клыки, с маршмеллоу ",
+      "quantity": 2,
+      "unit_coast": 179,
+      "measure": 3,
+      "id": 6
+    },
+    {
+      "name": "Сырокопчёная колбаса Останкино, Ароматная ",
+      "quantity": 250,
+      "unit_coast": 259,
+      "measure": 4,
+      "id": 7
+    },
+    {
+      "name": "Риет Путина Chef Rillettes, из икры трески, с томатами и базиликом ",
+      "quantity": 2,
+      "unit_coast": 169,
+      "measure": 3,
+      "id": 8
+    },
+    {
+      "name": "Напиток Dr. Drinks, вишня, с газом ",
+      "quantity": 1,
+      "unit_coast": 105,
+      "measure": 1,
+      "id": 9
+    },
+    {
+      "name": "Из Китая: Гирлянда Union Source 20 LED, тёплый белый, 2 м ",
+      "quantity": 1,
+      "unit_coast": 199,
+      "measure": 1,
+      "id": 11
+    }
+  ]
+}

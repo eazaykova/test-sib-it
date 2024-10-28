@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <a mat-icon-button color="accent" aria-label=" home icon" routerLink="">
+    <mat-icon>home</mat-icon>
+  </a>
+
+  <div>
+    <button mat-icon-button color="warm" (click)="editProductForm(product)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" (click)="deleteProduct(product.id!)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<div class="container">
+  <h1>Информация о продукте</h1>
+  <p>
+    Название: <span>{{ product.name }}</span>
+  </p>
+  <p>
+    Количество: <span>{{ product.quantity }}</span>
+  </p>
+  <p>
+    Единица измерения: <span>{{ measure.name }}</span>
+  </p>
+  <p>
+    Стоимость: <span>{{ product.unit_coast }} Руб.</span>
+  </p>
+</div>
